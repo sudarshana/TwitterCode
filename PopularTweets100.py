@@ -9,8 +9,8 @@ api = twitter.Api(
 
 search = api.GetSearch(term='query here', lang='en', result_type='popular', count=100)
 # query is what you are looking for. Example: term="cake" 
-# result_type also takes 'mixed' and 'recent'
-# count shows the number of tweets
+# result_type also takes 'mixed' and 'recent' https://dev.twitter.com/rest/reference/get/search/tweets
+# count shows number of tweets
 for term in search:
  print term.user.screen_name + ' (' + term.created_at + ')'  
  print term.text.encode('utf-8')

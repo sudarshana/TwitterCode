@@ -7,7 +7,8 @@ api = twitter.Api(
  access_token_secret='Access Token Secret here'
  )
 
-search = api.GetSearch(term='query here', lang='en', result_type='popular', count=100)
+query = raw_input('Term you want to search for: '), 
+search = api.GetSearch(term=query, lang='en', result_type='popular', count=100)
 # query is what you are looking for. Example: term="cake" 
 # result_type also takes 'mixed' and 'recent' https://dev.twitter.com/rest/reference/get/search/tweets
 # count shows number of tweets
